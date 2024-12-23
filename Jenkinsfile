@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:16-alpine'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
-    }
+    agent any
     environment {
         DOCKER_IMAGE = "rgr-test_app:latest"
         CONTAINER_NAME = "test_app"
